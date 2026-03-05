@@ -13,3 +13,6 @@ llm:
     api:
       key: abcdefgh0-asfas4fasf
 
+marv1n:
+  doc:
+    path: src/main/resources/docs/company-handbook.txt

@@ -1,5 +1,6 @@
 package com.codelab.aichat.rag.ingestion;
 
+import com.codelab.aichat.DocumentSourceType;
 import com.codelab.aichat.model.SourceDocument;
 
 import java.util.List;
@@ -16,5 +17,6 @@ public interface DocumentLoader {
      * @return a list of SourceDocument objects containing document data
      */
 
+    DocumentSourceType type();
     List<SourceDocument> loadDocuments();
 }
