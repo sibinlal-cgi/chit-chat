@@ -1,5 +1,6 @@
 package com.codelab.aichat.controller;
 
+import com.codelab.aichat.DocumentSourceType;
 import com.codelab.aichat.model.SourceDocument;
 import com.codelab.aichat.service.ChatService;
 import com.codelab.aichat.service.DocumentIngestionService;
@@ -28,7 +29,7 @@ public class ChatController {
 
     @GetMapping("/loadDoc")
     public List<SourceDocument> loadDoc() {
-        return documentIngestionService.loadDoc();
+        return documentIngestionService.loadDoc(DocumentSourceType.FILE);
     }
 
 }
