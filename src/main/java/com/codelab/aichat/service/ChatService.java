@@ -15,5 +15,4 @@ public class ChatService {
                 "question: " + question;
         return chatLanguageModel.generate(prompt);
     }
-
 }
