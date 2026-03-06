@@ -1,8 +1,8 @@
-package com.codelab.aichat.service;
+package com.marvin.aichat.service;
 
-import com.codelab.aichat.DocumentSourceType;
-import com.codelab.aichat.model.SourceDocument;
-import com.codelab.aichat.rag.ingestion.DocumentLoader;
+import com.marvin.aichat.model.DocumentSourceType;
+import com.marvin.aichat.model.SourceDocument;
+import com.marvin.aichat.rag.ingestion.DocumentLoader;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -23,7 +23,7 @@ public class DocumentIngestionService {
     public List<SourceDocument> loadDoc(DocumentSourceType type) {
         DocumentLoader docLoader = loaderMap.get(type);
         if (docLoader == null) {
-            throw new IllegalArgumentException("Could not find document loader");
+            throw new IllegalArgumentException("Could not find the document loader.Verify the provided document type.");
         }
         return docLoader.loadDocuments();
     }

@@ -1,4 +1,4 @@
-package com.codelab.aichat;
+package com.marvin.aichat.model;
 
 public enum DocumentSourceType {
 
