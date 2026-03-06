@@ -1,8 +1,8 @@
-package com.codelab.aichat.rag.ingestion;
+package com.marvin.aichat.rag.ingestion;
 
-import com.codelab.aichat.DocumentSourceType;
-import com.codelab.aichat.exception.CustomDocumentException;
-import com.codelab.aichat.model.SourceDocument;
+import com.marvin.aichat.model.DocumentSourceType;
+import com.marvin.aichat.exception.CustomDocumentException;
+import com.marvin.aichat.model.SourceDocument;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -26,7 +26,6 @@ public class FileSystemDocumentLoader implements DocumentLoader {
         try {
             Path path = Path.of(documentPath);
             String content = Files.readString(path);
-            System.out.println(content);
             SourceDocument document = new SourceDocument("company-handbook", content);
             return List.of(document);
         } catch (Exception ex) {

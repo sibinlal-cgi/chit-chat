@@ -1,4 +1,4 @@
-package com.codelab.aichat.config;
+package com.marvin.aichat.config;
 
 import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.model.googleai.GoogleAiGeminiChatModel;

@@ -1,4 +1,4 @@
-package com.codelab.aichat.exception;
+package com.marvin.aichat.exception;
 
 public class CustomDocumentException extends RuntimeException {
 

@@ -1,4 +1,4 @@
-package com.codelab.aichat.model;
+package com.marvin.aichat.model;
 
 import lombok.Data;
 import lombok.RequiredArgsConstructor;

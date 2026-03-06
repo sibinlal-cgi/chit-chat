@@ -1,9 +1,9 @@
-package com.codelab.aichat.controller;
+package com.marvin.aichat.controller;
 
-import com.codelab.aichat.DocumentSourceType;
-import com.codelab.aichat.model.SourceDocument;
-import com.codelab.aichat.service.ChatService;
-import com.codelab.aichat.service.DocumentIngestionService;
+import com.marvin.aichat.model.DocumentSourceType;
+import com.marvin.aichat.model.SourceDocument;
+import com.marvin.aichat.service.ChatService;
+import com.marvin.aichat.service.DocumentIngestionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

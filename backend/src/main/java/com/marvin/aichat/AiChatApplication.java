@@ -1,4 +1,4 @@
-package com.codelab.aichat;
+package com.marvin.aichat;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

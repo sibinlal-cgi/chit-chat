@@ -1,7 +1,7 @@
-package com.codelab.aichat.rag.ingestion;
+package com.marvin.aichat.rag.ingestion;
 
-import com.codelab.aichat.DocumentSourceType;
-import com.codelab.aichat.model.SourceDocument;
+import com.marvin.aichat.model.DocumentSourceType;
+import com.marvin.aichat.model.SourceDocument;
 
 import java.util.List;
 
@@ -18,5 +18,6 @@ public interface DocumentLoader {
      */
 
     DocumentSourceType type();
+
     List<SourceDocument> loadDocuments();
 }
