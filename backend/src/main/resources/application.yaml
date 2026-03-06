@@ -15,4 +15,4 @@ llm:
 
 marv1n:
   doc:
-    path: src/main/resources/docs/company-handbook.txt
+    path: classpath:docs/company-handbook.txt
