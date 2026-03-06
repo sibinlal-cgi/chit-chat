@@ -19,8 +19,11 @@ public class FileSystemDocumentLoader implements DocumentLoader {
     @Value("${marv1n.doc.path}")
     private String documentPath;
 
-    @Autowired
-    private ResourceLoader resourceLoader;
+    private final ResourceLoader resourceLoader;
+
+    public FileSystemDocumentLoader(ResourceLoader resourceLoader) {
+        this.resourceLoader = resourceLoader;
+    }
 
     @Override
     public DocumentSourceType type() {
