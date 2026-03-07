@@ -2,6 +2,10 @@ package com.marvin.aichat.exception;
 
 public class CustomDocumentException extends RuntimeException {
 
+    /**
+     * TODO: Centralised exception handling
+     */
+
     public CustomDocumentException(String message) {
         super(message);
     }

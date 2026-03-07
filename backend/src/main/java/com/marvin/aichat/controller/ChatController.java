@@ -27,9 +27,4 @@ public class ChatController {
         return chatService.ask(question);
     }
 
-    @GetMapping("/loadDoc")
-    public List<SourceDocument> loadDoc() {
-        return documentIngestionService.loadDoc(DocumentSourceType.FILE);
-    }
-
 }
