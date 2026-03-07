@@ -10,8 +10,10 @@ llm:
   provider: gemini
   gemini:
     model: gemini-2.5-flash-lite
+    Embedding:
+      model: gemini-embedding-001
     api:
-      key: abcd*****74123
+      key: A45455******************
   openai:
     model: abcd-1.0
     api:

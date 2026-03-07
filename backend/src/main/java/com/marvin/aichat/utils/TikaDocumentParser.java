@@ -15,11 +15,11 @@ public class TikaDocumentParser {
     Tika tika = new Tika();
 
     public SourceDocument parseDoc(MultipartFile file) {
-
         try {
             if(file == null) throw new IllegalArgumentException(FILE_NOT_FOUND);
+
             String content = tika.parseToString(file.getInputStream());
-            if (content.isEmpty()) throw new IllegalArgumentException(FILE_NOT_FOUND);
+            if (content == null || content.trim().isEmpty()) throw new IllegalArgumentException(FILE_NOT_FOUND);
 
             String documentId = file.getOriginalFilename();
             log.info("Parsed document {} with {} characters ", documentId, content.length());
