@@ -1,2 +1,2 @@
 # chit-chat
-AI powered chat application
+AI powered general-purpose knowledge retrieval and reasoning system.

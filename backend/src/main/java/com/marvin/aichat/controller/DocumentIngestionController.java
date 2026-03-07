@@ -1,8 +1,8 @@
 package com.marvin.aichat.controller;
 
 import com.marvin.aichat.model.DocumentSourceType;
-import com.marvin.aichat.model.SourceDocument;
 import com.marvin.aichat.rag.chunking.ChunkingService;
+import com.marvin.aichat.rag.model.ChunkEmbedding;
 import com.marvin.aichat.rag.model.TextChunk;
 import com.marvin.aichat.service.DocumentIngestionService;
 import lombok.RequiredArgsConstructor;
@@ -27,15 +27,15 @@ public class DocumentIngestionController {
     @PostMapping("/ingest")
     public ResponseEntity<?> manualIngest(@RequestParam("file") MultipartFile file) {
 
-        List<TextChunk> chunks = docIngestionService.doRagIngestion(file);
+        List<ChunkEmbedding> chunkEmbeddings = docIngestionService.doRagIngestion(file);
         return ResponseEntity.ok(
-                "Chunks created: " + chunks
+                "chunkEmbeddings created: " + chunkEmbeddings
         );
     }
 
     /**
      * This API will trigger file ingestion from a predefined location eg: project doc folder, s3, ftp etc
-     * TODO: accept file name and type from api
+     * TODO: accept file name and type from api. complete flow in v2 release.
      *
      * @return
      */
@@ -43,9 +43,9 @@ public class DocumentIngestionController {
     @GetMapping("/chunks")
     public ResponseEntity<?> autoIngestFromFileLocation() {
         String fileName = "company-handbook.txt";
-        List<TextChunk> chunks = docIngestionService.loadDocAndIngest(DocumentSourceType.FILE, fileName);
+        List<ChunkEmbedding> chunkEmbeddings = docIngestionService.loadDocAndIngest(DocumentSourceType.FILE, fileName);
         return ResponseEntity.ok(
-                "Chunks created: " + chunks
+                "chunkEmbeddings created: " + chunkEmbeddings
         );
     }
 }

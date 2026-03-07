@@ -19,13 +19,13 @@ public class RecursiveDocumentChunker implements DocumentChunker {
      * Using LangChain4j recursive splitter.
      * hard coded 500 chunksize and 50 overlap. TODO: Configure these values
      * TODO: This strategy can be reviewed and changed later. Add proper exception handling
-     *
      */
 
     private final DocumentSplitter documentSplitter;
 
     public RecursiveDocumentChunker() {
-        this.documentSplitter = DocumentSplitters.recursive(500, 50);
+        this.documentSplitter = DocumentSplitters
+                .recursive(500, 50);
     }
 
     @Override
