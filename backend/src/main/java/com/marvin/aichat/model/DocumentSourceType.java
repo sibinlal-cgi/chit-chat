@@ -8,7 +8,7 @@ public enum DocumentSourceType {
 
     FILE,
     PDF,
-    DATABASE,
+    FTP,
     S3
 }
 

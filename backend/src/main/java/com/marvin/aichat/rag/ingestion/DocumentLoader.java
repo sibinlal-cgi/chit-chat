@@ -19,5 +19,5 @@ public interface DocumentLoader {
 
     DocumentSourceType type();
 
-    List<SourceDocument> loadDocuments();
+    List<SourceDocument> loadDocuments(String fileName);
 }
